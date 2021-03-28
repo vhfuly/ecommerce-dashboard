@@ -6,20 +6,37 @@ type Props = {
   open: boolean;
 } 
 
+const items = [
+  { route: '/', icon: (<i className='fas fa-copy' />), title: 'Pedidos' },
+  { route: '/clients', icon: (<i className='fas fa-users' />), title: 'Clientes' },
+  { route: '/Categories', icon: (<i className='fas fa-clone' />), title: 'Categorias' },
+  { route: '/products', icon: (<i className='fas fa-boxes' />), title: 'Produtos' },
+  { route: '/settings', icon: (<i className='fas fa-cog' />), title: 'Configurações' },
+  { route: '/profile', icon: (<i className='fas fa-user' />), title: 'Perfil' },
+]
+
 const ItemsList: React.FC<Props> = props => (
   <div>
-    <Link to={'/'}>
-      <div className='item-menu'>
-        <div>
-          <i className='fas fa-copy' />
-        </div>
+    {
+      items.map((item, index) => (
 
-        <div>
-          <span>Pedidos</span>
-        </div>
-
-      </div>
-    </Link>
+        <Link to={item.route} key={index}>
+          <div className='item-menu'>
+            <div>
+              {item.icon}
+            </div>
+            {
+              props.open && 
+              (
+                <div>
+                  <span>{item.title}</span>
+                </div>
+              )
+            }
+          </div>
+        </Link>
+      ))
+    }
   </div>
 )
 
