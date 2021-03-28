@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { format } from 'date-fns'
 import Title from '../../components/Text/Title';
 import Search from '../../components/Imputs/Search';
+import Pagination from '../../components/Pagination/Simple';
 
 import SimpleTable from '../../components/Tables/Simple';
 
 
 const Purchases: React.FC = () => {
   const [search, setSearch] = useState('');
-  const onChangeSearch = (event: React.ChangeEvent<HTMLInputElement>) => setSearch(event.target.value)
+  const [current, setCurrent] = useState(0);
+  const onChangeSearch = (event: React.ChangeEvent<HTMLInputElement>) => setSearch(event.target.value);
+  const changeCurrentNumber = (current: number )=> setCurrent(current);
   const data: Data[] = [
     {
       'client': 'cliente 1',
@@ -42,6 +45,7 @@ const Purchases: React.FC = () => {
     situacao: string;
     botãoDetalhes: string;
   } 
+
   return (
     <div className='Purchases'>
       <div className='card'>
@@ -50,13 +54,18 @@ const Purchases: React.FC = () => {
           value ={search}
           placeholder={'Pesquisa aqi pelo nome do cliente ...'}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChangeSearch(event) }
+          onClick={ () => alert('Pesquisando...!')}
         />
         <SimpleTable
           header = { ['cliente', 'Valor Total', 'Data', 'Situação' ]}
           data = {data}
         />
-        {/* 
-        <Pagination /> */}
+        <Pagination 
+          offset = {current}
+          total = {120}
+          limit = {20}
+          onClick ={ (currentNumber: number) => changeCurrentNumber(currentNumber)}
+        />
       </div>
     </div>
   )
