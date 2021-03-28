@@ -21,6 +21,17 @@
   display: flex;
   flex-direction: column;
 }
+.item-flex-center,
+.item-flex-end { 
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-flex-end {
+  justify-content: flex-end;
+}
 
 .container-items-list .item-menu{
   display: flex;

@@ -4,7 +4,7 @@ import Base from '../Base'
 const base = (Component: React.FC) => {
   function ComponentBase(props: any) {
       return (
-        <Base>
+        <Base history= {props.history}>
             <Component {...props}/>
         </Base>
       )

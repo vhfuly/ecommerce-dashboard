@@ -15,29 +15,32 @@ const items = [
   { route: '/profile', icon: (<i className='fas fa-user' />), title: 'Perfil' },
 ]
 
-const ItemsList: React.FC<Props> = props => (
-  <div className='container-items-list'>
-    {
-      items.map((item, index) => (
-
-        <Link to={item.route} key={index}>
-          <div className='item-menu'>
-            <div>
-              {item.icon}
+const ItemsList: React.FC<Props> = props => {
+  const local = props.history.location.pathname
+  return (
+    <div className='container-items-list'>
+      {
+        items.map((item, index) => (
+  
+          <Link to={item.route} key={index}>
+            <div className={`item-menu ${local === item.route ? 'item-active': ''}`}>
+              <div>
+                {item.icon}
+              </div>
+              {
+                props.open && 
+                (
+                  <div>
+                    <span>{item.title}</span>
+                  </div>
+                )
+              }
             </div>
-            {
-              props.open && 
-              (
-                <div>
-                  <span>{item.title}</span>
-                </div>
-              )
-            }
-          </div>
-        </Link>
-      ))
-    }
-  </div>
-)
+          </Link>
+        ))
+      }
+    </div>
+  )
+}
 
 export default ItemsList;
