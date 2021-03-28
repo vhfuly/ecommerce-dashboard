@@ -1,21 +1,22 @@
 import React from 'react';
 
-function Base(props: any) {
-  return (
-    <div className=''>
+import TopBar from './TopBar'
+import Menu from './Menu';
+
+const Base= (props: any) =>  (
+  <div className='containerBase'>
+    <div className='menu'>
+      <Menu history= {props.history}/>
+    </div>
+    <div>
       <div>
-        <p>Menu</p>
+        <TopBar />
       </div>
       <div>
-        <div>
-          barra top
-        </div>
-        <div>
-          {props.children}
-        </div>
+        {props.children}
       </div>
     </div>
-  )
-}
+  </div>
+)
 
 export default Base;

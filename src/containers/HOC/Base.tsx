@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from '../Base'
 
-const base = (Component: any) => {
+const base = (Component: React.FC) => {
   function ComponentBase(props: any) {
       return (
         <Base>

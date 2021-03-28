@@ -2,7 +2,7 @@ import React from 'react';
 import Title from '../../components/Text/Title';
 
 
-function Purchases() {
+const Purchases: React.FC = () => {
   return (
     <div className='Purchases'>
       <Title type='h1' title='Purchases' />
