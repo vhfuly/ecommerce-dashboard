@@ -16,7 +16,7 @@ const items = [
 ]
 
 const ItemsList: React.FC<Props> = props => (
-  <div>
+  <div className='container-items-list'>
     {
       items.map((item, index) => (
 

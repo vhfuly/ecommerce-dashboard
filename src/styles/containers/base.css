@@ -1,0 +1,28 @@
+.container-base {
+  display: flex;
+}
+
+.container-top-bar{
+  display: flex;
+  flex-direction: row;
+  width: 85vw;
+  justify-content: space-between;
+}
+
+.container-top-bar .viewStore{
+  margin-left: 2rem;
+}
+
+.container-top-bar .logout{
+  margin-left: 2rem;
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-items-list .item-menu{
+  display: flex;
+  padding: 1rem;
+}

@@ -16,8 +16,8 @@ const Menu: React.FC<Props> = (props) => (
   <div className='container-menu'> 
     <div className='item-top'>
       <i className='fas fa-arrow-left' />
+      <hr/>
     </div>
-    <hr/>
     <ItemsList open={open} history={props.history} />
   </div>
 )
