@@ -2,12 +2,9 @@
 import React, { useState } from 'react';
 import ItemsList from './ItemsList';
 
-
-
 type Props = {
   history: any;
 }
-
 
 const Menu: React.FC<Props> = (props) => {
   const[open, setOpen] = useState(true)
