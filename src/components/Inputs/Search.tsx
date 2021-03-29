@@ -3,7 +3,7 @@ import React from 'react';
 type Props = {
   value: string;
   placeholder: string;
-  onChange: any;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: Function;
 }
 

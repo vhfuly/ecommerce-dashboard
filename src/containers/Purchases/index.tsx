@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { format } from 'date-fns'
 import Title from '../../components/Text/Title';
-import Search from '../../components/Imputs/Search';
+import Search from '../../components/Inputs/Search';
 import Pagination from '../../components/Pagination/Simple';
 
 import SimpleTable from '../../components/Tables/Simple';
@@ -45,7 +45,7 @@ const Purchases: React.FC = () => {
     situacao: string;
     botãoDetalhes: string;
   } 
-
+console.log(search)
   return (
     <div className='Purchases'>
       <div className='card'>
