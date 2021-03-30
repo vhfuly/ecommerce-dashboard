@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Title from '../../components/Text/Title';
 import Input from '../../components/Inputs/Simple';
 import Checkbox from '../../components/Inputs/Checkbox';
+import Button from '../../components/Buttons/Simple';
 
 type Login = {
   email: string;
@@ -54,6 +55,7 @@ const Login: React.FC = () =>{
         <div>
           <Link to='/recover-password'>Esqueceu sua senha?</Link>
         </div>
+        <Button type='success' route='/' label='Entrar'/>
       </div>
     </div>
   );
