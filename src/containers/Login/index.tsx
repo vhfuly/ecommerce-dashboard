@@ -5,14 +5,14 @@ import Input from '../../components/Inputs/Simple';
 import Checkbox from '../../components/Inputs/Checkbox';
 import Button from '../../components/Buttons/Simple';
 
-type Login = {
+type LoginState = {
   email: string;
   password: string;
   optionRemember: boolean;
 }
 
 const Login: React.FC = () =>{
-  const [login, setLogin ] = useState<Login>({
+  const [login, setLogin ] = useState<LoginState>({
     email:'',
     password: '',
     optionRemember: true,
