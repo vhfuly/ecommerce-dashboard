@@ -30,7 +30,7 @@ const RecoverPassword: React.FC = () => {
       </div>
       <br />
       <div className="flex flex-center">
-        <Button type="success" route="/resetar-senha/1" label="RESETAR SENHA" />
+        <Button type="success" route='/reset-password/1' label="RESETAR SENHA" />
       </div>
     </div>
   );
