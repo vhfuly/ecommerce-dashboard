@@ -16,7 +16,7 @@ function App() {
       <Router>
         <div className="App">
           <Route path={'/'} exact component={base(Purchases)} />
-          <Route path={'/Purchase'} exact component={base(Purchase)} />
+          <Route path={'/Purchase/:id'} component={base(Purchase)} />
           <Route path={'/login'} component={Login} />
           <Route path={'/recover-password'} component={RecoverPassword} />
           <Route path={'/reset-password/:token'} component={ResetPassword} />

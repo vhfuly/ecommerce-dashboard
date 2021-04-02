@@ -18,7 +18,7 @@ const Purchases: React.FC = () => {
       'valor': 89.90,
       'date': format(new Date(),'dd-MM-yyyy' ),
       'situacao': 'Aguardando pagamento',
-      'botãoDetalhes': '/purchases/zsxahgvxsa'
+      'botãoDetalhes': '/purchase/zsxahgvxsa'
 
     },
     {
@@ -26,7 +26,7 @@ const Purchases: React.FC = () => {
       'valor': 10.90,
       'date': format(new Date(),'dd-MM-yyyy' ),
       'situacao': 'Aguardando pagamento',
-      'botãoDetalhes': '/purchases/54fde456v'
+      'botãoDetalhes': '/purchase/54fde456v'
 
     },
     {
@@ -34,7 +34,7 @@ const Purchases: React.FC = () => {
       'valor': 106.90,
       'date': format(new Date(),'dd-MM-yyyy' ),
       'situacao': 'Pagamento Concluido',
-      'botãoDetalhes': '/purchases/5456.4'
+      'botãoDetalhes': '/purchase/5456.4'
 
     },
   ]
