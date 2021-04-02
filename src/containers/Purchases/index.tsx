@@ -14,37 +14,37 @@ const Purchases: React.FC = () => {
   const changeCurrentNumber = (current: number )=> setCurrent(current);
   const data: Data[] = [
     {
-      'client': 'cliente 1',
-      'valor': 89.90,
-      'date': format(new Date(),'dd-MM-yyyy' ),
-      'situacao': 'Aguardando pagamento',
+      'Cliente': 'cliente 1',
+      'Valor Total': 89.90,
+      'Data': format(new Date(),'dd-MM-yyyy' ),
+      'Situação': 'Aguardando pagamento',
       'botãoDetalhes': '/purchase/zsxahgvxsa'
 
     },
     {
-      'client': 'cliente 2',
-      'valor': 10.90,
-      'date': format(new Date(),'dd-MM-yyyy' ),
-      'situacao': 'Aguardando pagamento',
+      'Cliente': 'cliente 2',
+      'Valor Total': 10.90,
+      'Data': format(new Date(),'dd-MM-yyyy' ),
+      'Situação': 'Aguardando pagamento',
       'botãoDetalhes': '/purchase/54fde456v'
 
     },
     {
-      'client': 'cliente 2',
-      'valor': 106.90,
-      'date': format(new Date(),'dd-MM-yyyy' ),
-      'situacao': 'Pagamento Concluido',
+      'Cliente': 'cliente 2',
+      'Valor Total': 106.90,
+      'Data': format(new Date(),'dd-MM-yyyy' ),
+      'Situação': 'Pagamento Concluido',
       'botãoDetalhes': '/purchase/5456.4'
 
     },
   ]
   type Data = {
-    client: string;
-    valor: number;
-    date: string;
-    situacao: string;
-    botãoDetalhes: string;
-  } 
+    'Cliente': string;
+    'Valor Total': number;
+    'Data': string;
+    'Situação': string;
+    'botãoDetalhes': string;
+  }
 console.log(search)
   return (
     <div className='Purchases'>
@@ -57,7 +57,7 @@ console.log(search)
           onClick={ () => alert('Pesquisando...!')}
         />
         <SimpleTable
-          header = { ['cliente', 'Valor Total', 'Data', 'Situação' ]}
+          header = { ['Cliente', 'Valor Total', 'Data', 'Situação' ]}
           data = {data}
         />
         <Pagination 

@@ -18,25 +18,25 @@ const SimpleTable: React.FC<Props> = props => (
       </thead>
       <tbody>
         {
-          props.data.map((row, index) =>(
+          props.data.map((row: any, index) =>(
             <tr key={index}>
-               {
-                  Object.values(row).map((item, indexHeader) => {
-                    if (String(item).substr(0,1) === '/') return (
-                      <td>
-                      <Link to={String(item)}>
-                        <button>
-                          DETALHES
-                        </button>
-                      </Link>
-                    </td>
-                    ) 
-                    else return (
-                      
-                      <td key={indexHeader}>{item|| ''}</td>
-                    )
-                  })
-                }
+              {
+                props.header.map((item, index) => (
+                  <td key={index}>{row[item] || ''}</td>
+                ))
+              
+              }
+              { 
+                row['botãoDetalhes'] && (
+                  <td>
+                    <Link to={row['botãoDetalhes']}>
+                      <button className='button-danger'>
+                        DETALHES
+                      </button>
+                  </Link>
+                  </td>
+                ) 
+              }
             </tr>
           ))
         }

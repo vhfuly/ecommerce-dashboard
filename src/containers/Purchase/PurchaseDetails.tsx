@@ -5,20 +5,26 @@ import ButtonSimple from '../../components/Buttons/Simple';
 import SimpleTable from '../../components/Tables/Simple';
 
 const PurchaseDetails: React.FC = () => {
-  const data = [
+  const data: Data[] = [
     {
-      Product:'Produto 1',
-      UnitValue: 'R$ 10,00',
-      amount:'2',
-      TotalValue: 'R$ 20,00',
+      'Produto':'Produto 1',
+      'Preço Unitário': 'R$ 10,00',
+      'Quantidade':'2',
+      'Preço Total': 'R$ 20,00',
     },
     {
-      Product:'Produto 2',
-      UnitValue: 'R$ 13,50',
-      amount:'2',
-      TotalValue: 'R$ 13,50',
+      'Produto':'Produto 2',
+      'Preço Unitário': 'R$ 13,50',
+      'Quantidade':'2',
+      'Preço Total': 'R$ 13,50',
     }
   ]
+  type Data = {
+    'Produto': string;
+    'Preço Unitário': string;
+    'Quantidade': string;
+    'Preço Total': string;
+  }
   return(
     <div className='container-purchase-details'>
       <div>
