@@ -11,6 +11,12 @@ type Props = {
 const DynamicList: React.FC<Props> = props => {
   const [text, setText] = useState('');
   const onchangeInput = (event: React.ChangeEvent<HTMLInputElement>) => setText(event.target.value);
+
+  const onAdd = (text: string) => {
+    props.onAdd(text);
+    setText('');
+  }
+  
   return(
     <div>
       {
@@ -42,7 +48,7 @@ const DynamicList: React.FC<Props> = props => {
         />
         <ButtonSimple 
           type='success'
-          onClick={() => props.onAdd(text)}
+          onClick={() => onAdd(text)}
           label='+'
         />
       </div>
