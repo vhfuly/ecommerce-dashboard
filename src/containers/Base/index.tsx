@@ -10,13 +10,11 @@ const Base= (props: any) =>  (
     <div className='menu'>
       <Menu history= {props.history}/>
     </div>
-    <div>
-      <div className='top-bar'>
-        <TopBar />
-      </div>
-      <div>
-        {props.children}
-      </div>
+    <div className='container-data'>
+      <TopBar />
+      
+      {props.children}
+      
     </div>
   </div>
 )

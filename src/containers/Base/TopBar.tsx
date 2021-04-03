@@ -7,7 +7,7 @@ const TopBar: React.FC = () => (
       <a href='/'>Ver Loja</a>
     </div>
     <div className='logout'>
-      <Link to='logout'>sair</Link>
+      <Link to='logout'>Sair</Link>
     </div>
   </div>
 )

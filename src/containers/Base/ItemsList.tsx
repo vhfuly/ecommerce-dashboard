@@ -19,6 +19,7 @@ const ItemsList: React.FC<Props> = props => {
   const local = props.history.location.pathname
   return (
     <div className='container-items-list'>
+    <hr/>
       {
         items.map((item, index) => (
   
