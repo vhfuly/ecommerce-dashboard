@@ -26,14 +26,17 @@ const PurchaseDetails: React.FC = () => {
     'Preço Total': string;
   }
   return(
-    <div className='container-purchase-details'>
+    <div className='flex flexColumn'>
+      <div className='center'>
+        <Title type='h2' title='Pedido - cliente 1 - 04/03/2021'/>
+      </div>
       <div>
-        <Title type='h2' title='pedido - cliente 1 - 04/03/2021'/>
         <ButtonSimple 
           type='danger'
           label='Cancelar Pedido'
           onClick={() => alert('Cancelado...!')}
         />
+
       </div>
       <div>
         <Title type='h4' title='Dados do Cliente'/>
@@ -51,19 +54,18 @@ const PurchaseDetails: React.FC = () => {
         <TextData parameter='CEP' value='123456-789'/>
       </div>
       <div>
-        <Title type='h4' title='Dados de Pagamento'/>
-        <TextData parameter='Taxa de Entrega' value='R$ 15,50 (PAC)'/>
-        <TextData parameter='Valor dp Pedido' value='R$ 33,50'/>
-        <TextData parameter='Valor Total' value='R$ 49,00'/>
-        <TextData parameter='Forma de Pagamento' value='Boleto'/>
-      </div>
-
-      <div>
         <Title type='h4' title='Dados do Carrinho'/>
         <SimpleTable 
           header={['Produto', 'Preço Unitário', 'Quantidade', 'Preço Total']}
           data={data}
         />
+      </div>
+      <div>
+        <Title type='h4' title='Dados de Pagamento'/>
+        <TextData parameter='Taxa de Entrega' value='R$ 15,50 (PAC)'/>
+        <TextData parameter='Valor dp Pedido' value='R$ 33,50'/>
+        <TextData parameter='Valor Total' value='R$ 49,00'/>
+        <TextData parameter='Forma de Pagamento' value='Boleto'/>
       </div>
     </div>
   );

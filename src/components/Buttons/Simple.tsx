@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Button: React.FC<Props> = props => (
-  <div className="button">
+  <div>
     <button 
       onClick={props.onClick}
       className={`button button-${ props.type || 'default'}`}>

@@ -10,9 +10,6 @@ table.simple td{
   font-size: 0.9rem;
 }
 
-table.simple td:last-child {
-  border-bottom: none;
-}
 
 table.simple th{
   background-color: var(--color-theme);
