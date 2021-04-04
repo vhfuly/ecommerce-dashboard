@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../styles/components/table.css'
 
 type Props = {
   header: string[];
@@ -30,7 +31,7 @@ const SimpleTable: React.FC<Props> = props => (
                 row['botãoDetalhes'] && (
                   <td>
                     <Link to={row['botãoDetalhes']}>
-                      <button className='button-danger'>
+                      <button className='button button-danger button-small'>
                         DETALHES
                       </button>
                   </Link>

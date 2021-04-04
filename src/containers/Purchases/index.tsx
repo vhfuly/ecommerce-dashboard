@@ -47,12 +47,12 @@ const Purchases: React.FC = () => {
   }
 console.log(search)
   return (
-    <div className='Purchases'>
+    <div className='center flex'>
       <div className='card'>
         <Title type ='h1' title='Purchases' />
         <Search
           value ={search}
-          placeholder={'Pesquisa aqi pelo nome do cliente ...'}
+          placeholder={'Pesquise aqui pelo nome do cliente ...'}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => onChangeSearch(event) }
           onClick={ () => alert('Pesquisando...!')}
         />

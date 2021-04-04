@@ -10,11 +10,9 @@
 .container-top-bar{
   display: flex;
   flex-direction: row;
-  margin-left: -1.6rem;
   width: 100%;
   z-index: inherit;
-  padding: 1rem;
-  padding-left: 0.5rem;
+  padding: 1rem 0 ;
   height: 1.33rem;
   background-color: var(--color-theme);
 }
@@ -42,7 +40,6 @@
 
 .container-menu {
   display: flex;
-  margin-right: 1.5rem;
   flex-direction: column;
   height: 100vh;
   min-width: 70px;
@@ -81,7 +78,6 @@
 .item-active{
   background-color: var(--color-light-theme);
 }
-
 
 .container-items-list .item-menu i {
   font-size: 1.4rem;

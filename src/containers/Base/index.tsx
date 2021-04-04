@@ -12,9 +12,9 @@ const Base= (props: any) =>  (
     </div>
     <div className='container-data'>
       <TopBar />
-      
-      {props.children}
-      
+      <div className='teste'>
+        {props.children}
+      </div>
     </div>
   </div>
 )
