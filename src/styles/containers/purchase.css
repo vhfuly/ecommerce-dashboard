@@ -4,3 +4,18 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.purchase-details-herder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.purchase-details-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.purchase-details-content > div {
+  display: flex;
+  flex-direction: column;
+}
