@@ -15,7 +15,7 @@ const PaymentsDetails: React.FC = () => {
 
   return(
     <div className='container-payments-details'>
-      <Title type='h4' title='Detalhes de Pagamento'/>
+      <Title type='h2' title='Detalhes de Pagamento'/>
       <DynamicList 
         data={status}
         onAdd={onAddDynamicList}

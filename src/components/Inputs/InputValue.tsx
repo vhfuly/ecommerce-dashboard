@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ButtonSimple from '../Buttons/Simple';
 
 type Props = {
   value: string;
@@ -20,7 +21,7 @@ const InputValue: React.FC<Props> = props => {
   }
 
   if (from) return (
-    <div className="input-value input-value-open">
+    <div className="flex input-value input-value-open">
       <div>
         <input 
           value={value}
@@ -28,24 +29,29 @@ const InputValue: React.FC<Props> = props => {
           name={props.name}
         />
       </div>
-      <div>
-        <div onClick={() => handleSubmit(value)}>
-          <i className='fas fa-check' />
-        </div>
-        <div onClick={toggleFrom}>
-          <i className='fas fa-times' />
-        </div>
+      <div className="flex">
+        <ButtonSimple 
+          type='success button-small'
+          onClick={() => handleSubmit(value)}
+          label={(<i className='fas fa-check' />)}
+        />
+        <ButtonSimple 
+          type='danger button-small'
+          onClick={toggleFrom}
+          label={(<i className='fas fa-times' />)}
+        />
       </div>
-  
     </div>
 
   )
   else return (
-    <div className="input-value">
-      <span>{props.value}</span>
-      <div onClick={() => toggleFrom()}>
-        <i className='fas fa-edit' />
-      </div>
+    <div className="input-value flex">
+      <span onClick={toggleFrom}>{props.value}</span>
+        <ButtonSimple 
+          type='warning button-small'
+          onClick={toggleFrom}
+          label={(<i className='fas fa-edit' />)}
+        />
     </div>
   );
   

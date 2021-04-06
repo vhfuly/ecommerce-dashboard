@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ButtonSimple from '../Buttons/Simple';
 import InputSimple from '../Inputs/Simple';
 
+import '../../styles/components/list.css';
+
 type Props = {
   data: string[];
   onRemove?: any;
@@ -22,10 +24,8 @@ const DynamicList: React.FC<Props> = props => {
       {
         props.data.map ((item, index) => (
           <div>
-            <div key={index}>
-              <div>
-                <span>{item}</span>
-              </div>
+            <div key={index} className='border-green'>
+              <span>{item}</span>
             </div>
           { 
             props.onRemove &&
@@ -40,7 +40,7 @@ const DynamicList: React.FC<Props> = props => {
           </div>    
         ))
       }
-      <div>
+      <div className='input-list'>
         <InputSimple
           type='text'
           value={text}

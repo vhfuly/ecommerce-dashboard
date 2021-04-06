@@ -5,7 +5,7 @@ type Props = {
   type: string;
   onClick?: (event: React.MouseEvent) => void;
   route?: string;
-  label: string;
+  label: string | any;
 }
 
 const Button: React.FC<Props> = props => (

@@ -16,7 +16,7 @@
 main {
   overflow-y: scroll;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 }
 
 
@@ -73,6 +73,28 @@ body {
 }
 
 .button-danger:hover {
+  opacity: 0.8;
+}
+
+.button-success {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  transition: opacity 20ms;
+}
+
+.button-success:hover {
+  opacity: 0.8;
+}
+
+.button-warning {
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  border: none;
+  transition: opacity 20ms;
+}
+
+.button-warning:hover {
   opacity: 0.8;
 }
 

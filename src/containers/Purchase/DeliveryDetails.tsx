@@ -20,7 +20,7 @@ const DeliveryDetails: React.FC = () => {
 
   return(
     <div className='container-Delivery-detail'>
-      <Title type='h4' title='Detalhes de Entrega'/>
+      <Title type='h2' title='Detalhes de Entrega'/>
       <label>Código de Rastreamento</label>
       <InputValue 
         value={trackingCode}
