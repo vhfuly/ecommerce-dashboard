@@ -3,7 +3,8 @@ import Title from '../../components/Text/Title';
 import Input from '../../components/Inputs/Simple';
 import Button from '../../components/Buttons/Simple';
 
-import '../../styles/containers/recover-password.css'
+import '../../styles/containers/recover-password.css';
+
 const RecoverPassword: React.FC = () => {
   const [email, setEmail ] = useState<string>('');
   const onchangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +25,7 @@ const RecoverPassword: React.FC = () => {
         </div>
         <div>
         <Input
-          label="E-mail"
+          label="E-mail :"
           value={email}
           onChange={(event: React.ChangeEvent<HTMLInputElement>) => onchangeInput(event)}
           type="email" />

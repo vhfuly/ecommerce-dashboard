@@ -4,6 +4,8 @@ import Title from '../../components/Text/Title';
 import Input from '../../components/Inputs/Simple';
 import Button from '../../components/Buttons/Simple';
 
+import '../../styles/containers/recover-password.css';
+
 type ResetPasswordState = {
   password: string;
   confirmPassword: string;
@@ -21,7 +23,7 @@ const ResetPassword: React.FC = () => {
 
   return(
     <div className='container-reset-password'>
-       <div className='Card'>
+       <div className='card'>
         <div>
             <Title type='h1' title='LOJA' />
         </div>
@@ -34,18 +36,18 @@ const ResetPassword: React.FC = () => {
         <br />
         <div>
           <Input 
-            label="Senha" 
+            label="Senha :" 
             type="password" 
             value={resetPassword.password} 
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => onchangeInput('password', event)} />
           <Input 
-            label="Confirmar Senha" 
+            label="Confirmar Senha :" 
             type="password" 
             value={resetPassword.confirmPassword} 
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => onchangeInput('confirmPassword', event) } />
         </div>
         <br />
-        <div className="flex flex-center">
+        <div className="button-reset">
           <Button type="success" route="/login" label="RESETAR SENHA" />
         </div>
     </div>
