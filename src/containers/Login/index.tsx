@@ -5,6 +5,8 @@ import Input from '../../components/Inputs/Simple';
 import Checkbox from '../../components/Inputs/Checkbox';
 import Button from '../../components/Buttons/Simple';
 
+import '../../styles/containers/login.css'
+
 type LoginState = {
   email: string;
   password: string;
@@ -30,32 +32,37 @@ const Login: React.FC = () =>{
   return (
     <div className='container-login'>
       <div className='card'>
-        <Title type='h1' title='Loja' />
-        <p>Faça seu Login abaixo</p>
-        <Input 
-          label='Email'
-          value={login.email}
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onchangeInput('email', event)}
-        />
-        <Input 
-          label='Password'
-          value={login.password}
-          type='password'
-          onChange={(event: React.ChangeEvent<HTMLInputElement>) => onchangeInput('password', event)}
-        />
-      </div>
-      <div>
-        <div>
-          <Checkbox 
-            value={login.optionRemember} 
-            onChange ={() => onChangeCheckBox('optionRemember')}
-            label='Lembrar?'
+        <div className='flex flexColumn center'>
+          <Title type='h1' title='Loja' />
+          <p>Faça seu Login abaixo</p>
+        </div>
+        <br/><br/>
+          <Input 
+            label='Email : '
+            value={login.email}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => onchangeInput('email', event)}
           />
+          <Input 
+            label='Password : '
+            value={login.password}
+            type='password'
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => onchangeInput('password', event)}
+          />
+        <div className='flex'>
+          <div className='flex-1'>
+            <Checkbox 
+              value={login.optionRemember} 
+              onChange ={() => onChangeCheckBox('optionRemember')}
+              label='Lembrar?'
+            />
+          </div>
+          <div className='flex-end'>
+            <Link to='/recover-password'><small>Esqueceu sua senha?</small></Link>
+          </div>
         </div>
-        <div>
-          <Link to='/recover-password'>Esqueceu sua senha?</Link>
+        <div className='button-login'>
+          <Button type='success' route='/' label='Entrar'/>
         </div>
-        <Button type='success' route='/' label='Entrar'/>
       </div>
     </div>
   );

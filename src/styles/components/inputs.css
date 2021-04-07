@@ -14,6 +14,16 @@
   cursor: pointer;
 }
 
+.input-simple {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-simple label {
+  margin: 0.6rem 0 0.15rem 0;
+  font-weight: bold;
+}
+
 .input-simple input{
   padding: 0.3rem 0.55rem;
   margin: 0.2rem 0;

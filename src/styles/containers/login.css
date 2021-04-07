@@ -1,0 +1,21 @@
+.container-login {
+ display: flex;
+ justify-content: center;
+}
+
+.container-login .card{
+  width: 95%;
+  max-width: 450px;
+}
+
+.container-login a{
+  text-decoration: none;
+  color: #474747;
+}
+
+.button-login {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
