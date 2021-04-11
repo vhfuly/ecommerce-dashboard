@@ -42,11 +42,16 @@
   border: 1px solid var(--color-dark-gray);
   padding: 0.3rem 1rem;
   border-radius: 5px;
-  width: 8rem;
   font-size: 1rem;
 }
 
 .input-value span{
   background-color: var(--color-light-gray);
   color: var(--color-dark-gray)
+}
+
+.input-noStyle {
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
 }

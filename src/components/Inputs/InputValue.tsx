@@ -4,6 +4,7 @@ import ButtonSimple from '../Buttons/Simple';
 type Props = {
   value: string;
   name: string;
+  noStyle?: boolean;
   handleSubmit: (value: string) => void;
 }
 const InputValue: React.FC<Props> = props => {
@@ -45,7 +46,7 @@ const InputValue: React.FC<Props> = props => {
 
   )
   else return (
-    <div className="input-value flex">
+    <div className={ props.noStyle ?"input-noStyle flex":  "input-value flex"}>
       <span onClick={toggleFrom}>{props.value}</span>
         <ButtonSimple 
           type='warning button-small'

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 
 type Props = {
   type: string;
   onClick?: (event: React.MouseEvent) => void;
   route?: string;
-  label: string | any;
+  label: string | ReactElement;
 }
 
 const Button: React.FC<Props> = props => (

@@ -7,6 +7,7 @@ import store from './store/store';
 import Purchases  from './containers/Purchases';
 import Purchase  from './containers/Purchase';
 import Clients  from './containers/Clients';
+import Client  from './containers/Client';
 import Login from './containers/Login';
 import RecoverPassword from './containers/RecoverPassword/RecoverPassword';
 import ResetPassword from './containers/RecoverPassword/ResetPassword';
@@ -18,7 +19,8 @@ function App() {
         <div className="App">
           <Route path={'/'} exact component={base(Purchases)} />
           <Route path={'/purchase/:id'} component={base(Purchase)} />
-          <Route path={'/clients'} exact component={base(Clients)} />
+          <Route path={'/clients'} component={base(Clients)} />
+          <Route path={'/client/:email'}  component={base(Client)} />
           <Route path={'/login'} component={Login} />
           <Route path={'/recover-password'} component={RecoverPassword} />
           <Route path={'/reset-password/:token'} component={ResetPassword} />
