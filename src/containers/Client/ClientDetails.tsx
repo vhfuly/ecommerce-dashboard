@@ -28,7 +28,7 @@ const ClientDetails: React.FC = () => {
     <div className='client-details'>
       <div className='flex'>
         <div className='flex flex-1'>
-        <Title type='h1' title='Cliente 1'/>
+        <Title type='h1' title={client.name}/>
         </div>
         <div className='flex flex-1 flex-end'>
           <ButtonSimple 

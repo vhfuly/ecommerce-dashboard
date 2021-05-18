@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ClientDetails from './ClientDetails';
-// import PurchasesDetails from './PurchasesDetails';
+import PurchasesDetails from './PurchasesDetails';
 import Back from '../../components/Links/Back';
 
 const Client: React.FC = () => {
@@ -12,8 +12,8 @@ const Client: React.FC = () => {
         <Back path='/clients'/>
         <ClientDetails />
       </div>
-      <div className='card flex flex-1'>
-        {/* <PurchasesDetails /> */}
+      <div className='card flex center'>
+        <PurchasesDetails />
       </div>
     </div>
   );

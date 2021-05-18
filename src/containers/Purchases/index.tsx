@@ -45,7 +45,6 @@ const Purchases: React.FC = () => {
     'Situação': string;
     'botãoDetalhes': string;
   }
-console.log(search)
   return (
     <div className='center flex'>
       <div className='card'>
