@@ -13,6 +13,8 @@ const Category: React.FC = () => {
         <div >
           <CategoryDetails />
         </div>
+        <br/>
+        <hr/>
         <div>
           <ProductList/>
         </div>

@@ -11,6 +11,8 @@ function Title(props: typesProps) {
       return (<h1 className='title'>{props.title}</h1>);
     case 'h2':
       return (<h2 className='secondary-title'>{props.title}</h2>);
+    case 'h3':
+        return (<h3 className='secondary-title'>{props.title}</h3>);
     case 'h4':
       return (<h4 className='subtitle'>{props.title}</h4>);
     default:
